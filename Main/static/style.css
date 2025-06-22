@@ -1,0 +1,23 @@
+li{
+    background: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 12px 18px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+}
+
+h1{
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    font-size: 32px;
+    margin-bottom: 20px;
+} 

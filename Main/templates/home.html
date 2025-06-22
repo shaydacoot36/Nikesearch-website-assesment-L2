@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shoe List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Available Shoes</h1>
+    <ul>
+        {% for shoe in shoes %}
+            <li>{{ shoe['name'] }} - Size: {{ shoe['size'] }} - Price: £{{ shoe['price'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
