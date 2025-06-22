@@ -28,11 +28,11 @@ def index():
     return render_template('home.html', shoes=shoes)
 
 
-@app.route("/bikes")
-def bikes():
+@app.route("/shoes")
+def shoes():
     db = get_db()
-    bikes = db.execute('SELECT * FROM bikes').fetchall()
-    return render_template('bike.html', bikes=bikes)
+    shoes = db.execute('SELECT * FROM shoes').fetchall()
+    return render_template('shoes.html', shoes=shoes)
 
 if __name__ == "__main__":
     app.run(debug=True)
