@@ -8,7 +8,7 @@
 {% extends "layout.html" %}
 {% block title %}Shoe List{% endblock %}
 {% block content %}
-    <h1>Available Shoes</h1>
+    <h1>Available Nike Shoes</h1>
     <ul>
         {% for shoe in shoes %}
             <li>{{ shoe['name'] }} - Size: {{ shoe['size'] }} - Price: £{{ shoe['price'] }}</li>
