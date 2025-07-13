@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Shoe List</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
 {% extends "layout.html" %}
 {% block title %}Shoe List{% endblock %}
 {% block content %}
-    <h1>Available Nike Shoes</h1>
+    <h1>Available Shoes</h1>
     <ul>
         {% for shoe in shoes %}
-            <li>{{ shoe['name'] }} - Size: {{ shoe['size'] }} - Price: £{{ shoe['price'] }}</li>
+            <li>
+                {{ shoe['model_name'] }} - Price: £{{ shoe['price'] }}<br>
+                {{ shoe['description'] }}<br>
+                <img src="{{ shoe['image_url'] }}" alt="{{ shoe['model_name'] }}" width="120">
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}
-</body>
-</html>
