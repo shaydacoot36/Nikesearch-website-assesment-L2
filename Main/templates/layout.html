@@ -6,6 +6,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <nav>
+        <ul class="navbar">
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('shoes') }}">Shoes</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+        </ul>
+    </nav>
     {% block content %}{% endblock %}
 </body>
 </html>
