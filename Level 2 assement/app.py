@@ -19,7 +19,7 @@ def close_db(error):
     db = g.pop('db', None)
     if db is not None:
         db.close()
-
+#test
 
 @app.route("/")
 def index():
