@@ -50,3 +50,17 @@ ul {
 .navbar li a:hover {
     background-color: #444;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li img {
+    width: 200px;      /* set desired width */
+    height: 200px;     /* set desired height */
+    object-fit: cover; /* crop and center image */
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto;
+}
