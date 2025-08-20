@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %}Women Shoes{% endblock %}
+{% block content %}
+    <h1>Women Shoes</h1>
+    <div class="shoe-row">
+        <img src="{{ url_for('static', filename='images/nikewomenshoe.png') }}" alt="Nike Women Shoe 1">
+        <img src="{{ url_for('static', filename='images/nikewomenshoe2.png') }}" alt="Nike Women Shoe 2">
+    </div>
+{% endblock %}

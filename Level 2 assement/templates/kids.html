@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block title %}Kids Shoes{% endblock %}
+{% block content %}
+    <h1>Kids Shoes</h1>
+    <div class="shoe-row">
+        <img src="{{ url_for('static', filename='images/nikeboykidshoe.png') }}" alt="Nike Boy Kid Shoe">
+        <img src="{{ url_for('static', filename='images/nikegirlkidshoe.png') }}" alt="Nike Girl Kid Shoe">
+    </div>
+{% endblock %}

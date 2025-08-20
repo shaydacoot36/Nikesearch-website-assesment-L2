@@ -13,7 +13,6 @@ def get_db():
         g.db.row_factory = sqlite3.Row
     return g.db
 
-
 @app.teardown_appcontext
 def close_db(error):
     db = g.pop('db', None)
@@ -32,6 +31,20 @@ def shoes():
     db = get_db()
     shoes = db.execute('SELECT * FROM shoes').fetchall()
     return render_template('shoes.html', shoes=shoes)
+
+@app.route("/kids")
+def kids():
+    return render_template("kids.html")
+
+@app.route("/women")
+def women():
+    return render_template("women.html")
+
+@app.route("/men")
+def men():
+    db = get_db()
+    shoes = db.execute('SELECT * FROM shoes').fetchall()
+    return render_template("men.html", shoes=shoes)
 
 if __name__ == "__main__":
     app.run(debug=True)

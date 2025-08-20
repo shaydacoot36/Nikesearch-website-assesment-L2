@@ -10,9 +10,9 @@
         <ul class="navbar">
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('shoes') }}">Shoes</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Kids</a></li>
+            <li><a href="{{ url_for('men') }}">Men</a></li>
+            <li><a href="{{ url_for('women') }}">Women</a></li>
+            <li><a href="{{ url_for('kids') }}">Kids</a></li>
         </ul>
     </nav>
     {% block content %}{% endblock %}
