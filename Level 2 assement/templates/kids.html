@@ -1,9 +1,23 @@
 {% extends "layout.html" %}
-{% block title %}Kids Shoes{% endblock %}
+{% block title %}Kids' Shoes{% endblock %}
 {% block content %}
-    <h1>Kids Shoes</h1>
-    <div class="shoe-row">
-        <img src="{{ url_for('static', filename='images/nikeboykidshoe.png') }}" alt="Nike Boy Kid Shoe">
-        <img src="{{ url_for('static', filename='images/nikegirlkidshoe.png') }}" alt="Nike Girl Kid Shoe">
+    <h1>Kids' Shoes</h1>
+    <div class="shoe-flex-row">
+        <div class="shoe-card">
+            <img src="{{ url_for('static', filename='images/nikeboykidshoe.png') }}" alt="Nike Boy Kid Shoe">
+            <div class="shoe-desc">
+                <div class="shoe-price"><strong>Now $159 NZD <span class="discount">(20% off)</span></strong></div>
+                <strong>Nike Boy Kid Shoe</strong>
+                <p>Sporty and comfortable Nike shoe for boys. Perfect for active kids!</p>
+            </div>
+        </div>
+        <div class="shoe-card">
+            <img src="{{ url_for('static', filename='images/nikegirlkidshoe.png') }}" alt="Nike Girl Kid Shoe">
+            <div class="shoe-desc">
+                <div class="shoe-price"><strong>Now $159 NZD <span class="discount">(20% off)</span></strong></div>
+                <strong>Nike Girl Kid Shoe</strong>
+                <p>Stylish and durable Nike shoe for girls. Great for play and school.</p>
+            </div>
+        </div>
     </div>
 {% endblock %}

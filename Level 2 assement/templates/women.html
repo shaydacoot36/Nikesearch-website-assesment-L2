@@ -1,9 +1,23 @@
 {% extends "layout.html" %}
-{% block title %}Women Shoes{% endblock %}
+{% block title %}Women's Shoes{% endblock %}
 {% block content %}
-    <h1>Women Shoes</h1>
-    <div class="shoe-row">
-        <img src="{{ url_for('static', filename='images/nikewomenshoe.png') }}" alt="Nike Women Shoe 1">
-        <img src="{{ url_for('static', filename='images/nikewomenshoe2.png') }}" alt="Nike Women Shoe 2">
+    <h1>Women's Shoes</h1>
+    <div class="shoe-flex-row">
+        <div class="shoe-card">
+            <img src="{{ url_for('static', filename='images/nikewomenshoe.png') }}" alt="Nike Women's Shoe 1">
+            <div class="shoe-desc">
+                <div class="shoe-price"><strong>Now $179 NZD <span class="discount">(15% off)</span></strong></div>
+                <strong>Nike Women's Shoe 1</strong>
+                <p>Classic white Nike Air Force 1. Comfortable and stylish for everyday wear.</p>
+            </div>
+        </div>
+        <div class="shoe-card">
+            <img src="{{ url_for('static', filename='images/nikewomenshoe2.png') }}" alt="Nike Women's Shoe 2">
+            <div class="shoe-desc">
+                <div class="shoe-price"><strong>Now $179 NZD <span class="discount">(15% off)</span></strong></div>
+                <strong>Nike Women's Shoe 2</strong>
+                <p>Modern black Nike Air Max. Sleek design with maximum cushioning.</p>
+            </div>
+        </div>
     </div>
 {% endblock %}

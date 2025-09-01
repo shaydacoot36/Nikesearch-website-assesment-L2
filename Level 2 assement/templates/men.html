@@ -2,15 +2,22 @@
 {% block title %}Men's Shoes{% endblock %}
 {% block content %}
     <h1>Men's Shoes</h1>
-    <img src="static/images/nikewhiteshoe.png" alt="Shoe Image" width="200">
-    <img src="static/images/nikeblackshoe.png" alt="Shoe Image" width="200">
-    <ul>
-        {% for shoe in shoes %}
-            <li>
-                {{ shoe['model_name'] }} - Price: £{{ shoe['price'] }}<br>
-                {{ shoe['description'] }}<br>
-                <img src="{{ shoe['image_url'] }}" alt="{{ shoe['model_name'] }}" width="120">
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="shoe-flex-row">
+        <div class="shoe-card">
+            <img src="{{ url_for('static', filename='images/nikewhiteshoe.png') }}" alt="Nike White Shoe">
+            <div class="shoe-desc">
+                <div class="shoe-price"><strong>Now $199 NZD <span class="discount">(10% off)</span></strong></div>
+                <strong>Nike White Shoe</strong>
+                <p>Classic white Nike Air Force 1. Comfortable and stylish for everyday wear.</p>
+            </div>
+        </div>
+        <div class="shoe-card">
+            <img src="{{ url_for('static', filename='images/nikeblackshoe.png') }}" alt="Nike Black Shoe">
+            <div class="shoe-desc">
+                <div class="shoe-price"><strong>Now $199 NZD <span class="discount">(10% off)</span></strong></div>
+                <strong>Nike Black Shoe</strong>
+                <p>Modern black Nike Air Max. Sleek design with maximum cushioning.</p>
+            </div>
+        </div>
+    </div>
 {% endblock %}
